@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F9FA;
+    margin:0;
+    overflow-x: hidden;
+}
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 35px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    border-radius: 8px;
+    border:#F8F9FA;
+}
+footer p{
+    font-size:11px;
+}
+iframe{
+    width:560px;
+    height:315px;
+    border:0;
+}
+h2,h3,.subTitle{
+    text-align: center;
+}
+input[type=checkbox]{
+    width:auto
+}
+.promImage,.Genres {
+    width: 200px;
+    height: 300px;
+}
+
+.promImage:hover,.Genres:hover {
+    transform: scale(1.05);
+}
+.promImage:active,.Genres:active {
+    transform: scale(1.1);
+}
+#avgviewer img{
+    width: 600px;
+    height:300px;
+}
+#Reviews{
+    background-color: #d8d6d6;
+    overflow:auto;
+    height: 300px;
+    border: solid;
+}
+#Rating{
+    color:rgb(92, 145, 13);
+}
+.Genres{
+    height: 150px;
+} 
+.form-label{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
