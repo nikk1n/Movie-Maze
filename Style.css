@@ -17,7 +17,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 65px;}
+    height: 50px;}
 
 a{
     text-decoration: none;
@@ -79,8 +79,6 @@ input[type=checkbox]{
     position: absolute;
     width: 1px;
 }
-
-/* Стили для кнопки FAQ */
 .faq-button {
     width: 100%;
     background-color: #007bff;
@@ -97,8 +95,7 @@ input[type=checkbox]{
   .faq-button:hover {
     background-color: #0056b3;
   }
-  
-  /* Скрываем ответ по умолчанию */
+
   .faq-answer {
     display: none;
       transition: max-height 0.3s ease-out;
@@ -113,7 +110,45 @@ input[type=checkbox]{
       color: red;
       font-size: 13px;
   }
+  #review-popup{
+      display:none;
+      position: fixed;
+      background-color:#d8d6d6;
+      z-index: 9;
+      border:solid;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      width:50%
+
+  }
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+.star{
+    cursor: pointer;
+    user-select: none;
+}
+.star:hover{
+    color:gray;
+}
+.checked{
+    color:orange;
+}
+.checked:hover{
+    color: darkorange;
+}
   main {
-    flex: 2; /* Это заставляет основной контент занимать доступное пространство */
-    margin-bottom: 50px; /* Добавьте отступ, чтобы избежать перекрытия футера */
+    flex: 2;
+    margin-bottom: 50px;
 }

@@ -23,13 +23,34 @@
         </div>
     </nav>
     <main class="mb-3">
+        <div id="overlay"></div>
     <section class="mt-2 ms-2"><h2>Shrek</h2>
     <iframe src="https://www.youtube.com/embed/EIE8xUbIEAQ?si=QgqVV6RWiebXu9jS" 
     title="YouTube video player"  
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerpolicy="strict-origin-when-cross-origin" 
     allowfullscreen></iframe>
-        <section class="container" id="Reviews"><h2>Reviews</h2><h3 id="Rating">☆ 4.6/5 ☆</h3>
+    </section>
+        <section id="review-popup" class="p-3">
+            <h2>Leave a review</h2>
+            <form>
+                <div>
+            <span class="star fs-1" onclick="updateRating(1)">★</span>
+            <span class="star fs-1" onclick="updateRating(2)">★</span>
+            <span class="star fs-1" onclick="updateRating(3)">★</span>
+            <span class="star fs-1" onclick="updateRating(4)">★</span>
+            <span class="star fs-1" onclick="updateRating(5)">★</span>
+                </div>
+                <div class="input-group mt-3">
+                <label class="form-label" for="review-text">Review text</label><textarea class="form-control w-25" id="review-text" name="review-text" placeholder="Enter your review here" rows="10"></textarea>
+                </div>
+                <input class="btn btn-secondary mt-2" type="submit" value="Submit">
+            </form>
+        </section>
+        <section class="container mb-5" id="Reviews"><h2>Reviews</h2><h3 id="Rating">☆ 4.6/5 ☆</h3>
+            <div>
+            <a class="btn btn-secondary mx-auto w-25 d-block" id="Review" href="#review-popup">Leave a review</a>
+            </div>
             <div class="row-cols-auto">
             <p>Great movie! ☆☆☆☆☆</p>
             <p>My children love it, i don't ☆☆☆</p>
@@ -44,7 +65,6 @@
             <p>Shrek! ☆☆☆☆☆</p>
             </div>
         </section>
-    </section>
 </main>
     <footer><p> Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br>
         Contact us: +77053567623  MovieMaze@gmail.com
@@ -52,5 +72,6 @@
         <p id="current-date">Current Date</p>
     </footer>
     <script src="Date.js"></script>
+    <script src="reviewPopup.js"></script>
 </body>
 </html>
