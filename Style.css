@@ -17,8 +17,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 35px;
-}
+    height: 65px;}
 
 a{
     text-decoration: none;
@@ -30,6 +29,7 @@ img{
 }
 footer p{
     font-size:11px;
+    margin: auto;
 }
 iframe{
     width:560px;
@@ -53,7 +53,7 @@ input[type=checkbox]{
 .promImage:active,.Genres:active {
     transform: scale(1.1);
 }
-#avgviewer img{
+#avg-viewer img{
     width: 600px;
     height:300px;
 }
@@ -78,4 +78,42 @@ input[type=checkbox]{
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+/* Стили для кнопки FAQ */
+.faq-button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+
+  .faq-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Скрываем ответ по умолчанию */
+  .faq-answer {
+    display: none;
+      transition: max-height 0.3s ease-out;
+    padding-left: 10px;
+     margin-bottom: 20px;
+    
+  }
+  #faq-section{
+      display: none;
+  }
+  .error-msg{
+      color: red;
+      font-size: 13px;
+  }
+  main {
+    flex: 2; /* Это заставляет основной контент занимать доступное пространство */
+    margin-bottom: 50px; /* Добавьте отступ, чтобы избежать перекрытия футера */
 }
