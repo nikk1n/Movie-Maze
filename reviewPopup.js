@@ -5,12 +5,15 @@ document.addEventListener("DOMContentLoaded", function(){
   reviewToggleButton.addEventListener("click", ()=> {
       if(reviewPopup.style.display === "none" || reviewPopup.style.display===""){
           reviewPopup.style.display="block";
+          reviewPopup.style.opacity="1";
           overlay.style.display="block"
       } else {
+          reviewPopup.style.opacity="0";
           reviewPopup.style.display="none";
       }
   })
     overlay.addEventListener("click",()=>{
+        reviewPopup.style.opacity="0";
         reviewPopup.style.display="none";
         overlay.style.display="none"
     })
