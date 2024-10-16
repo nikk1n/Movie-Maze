@@ -1,3 +1,4 @@
+//Find all elements
 const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
 const cards=document.querySelectorAll('.card');
@@ -5,8 +6,10 @@ const reviews=document.getElementById("Reviews");
 const review_popup=document.getElementById("review-popup");
 const inputs=document.querySelectorAll('input,select');
 toggle.addEventListener('click', function(){
+    //Changes toggle button state
     this.classList.toggle('bi-moon');
     if(this.classList.toggle('bi-brightness-high-fill')){
+        //White theme
         body.style.background = 'white';
         body.style.color = 'black';
         body.style.transition = '2s';
@@ -35,6 +38,7 @@ toggle.addEventListener('click', function(){
             }
         }
     }else{
+        //Dark theme
         body.style.background = 'black';
         body.style.color = 'white';
         body.style.transition = '2s';
