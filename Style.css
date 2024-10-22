@@ -154,3 +154,16 @@ input[type=checkbox]{
     flex: 2;
     margin-bottom: 50px;
 }
+#filterSection {
+    position: absolute;
+    top: 130px; /* Distance from the top */
+    right: 50px; /* Distance from the right */
+    width: 200px; /* Width of the dropdown */
+    text-align: right; /* Align the content to the right */
+    z-index: 100; /* Ensure it appears above other elements */
+}
+
+#filterSelect {
+    width: 100%;
+}
+
