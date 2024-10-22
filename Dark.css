@@ -1,8 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #F8F9FA;
+    background-color: black;
+    color:white;
     margin:0;
     overflow-x: hidden;
+    transition: 2s;
 }
 header {
     background-color: #333;
@@ -21,7 +23,7 @@ footer {
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 img{
     border-radius: 8px;
@@ -59,10 +61,12 @@ input[type=checkbox]{
     height:300px;
 }
 #Reviews{
-    background-color: #d8d6d6;
+    background-color: #555555;
+    color: white;
     overflow:auto;
     height: 300px;
-    border: solid;
+    border: solid white;
+    transition: 2s;
 }
 #Rating{
     color:rgb(92, 145, 13);
@@ -115,13 +119,17 @@ input[type=checkbox]{
       display:none;
       opacity:0;
       position: fixed;
-      background-color:#d8d6d6;
+      background-color:#555555;
       z-index: 9;
       border:solid;
       top:50%;
       left:50%;
       transform: translate(-50%,-50%);
       width:50%;
+  }
+  #review-popup textarea{
+      background-color: #888888;
+      color: white ;
   }
 #overlay {
     position: fixed;
@@ -166,4 +174,18 @@ input[type=checkbox]{
 #filterSelect {
     width: 100%;
 }
-
+.card{
+    background-color: black !important;
+    color: white;
+    border-color: black !important;
+    transition: 2s;
+}
+input, select{
+    background-color: #555555 !important;
+    color:white !important;
+    border-color: white;
+    transition: 2s !important;
+}
+.no-transition{
+    transition: none !important;
+}

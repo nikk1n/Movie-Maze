@@ -1,1 +1,0 @@
-const Ollo= document.getElementById("faq-Toggler");

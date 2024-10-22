@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dateElement = document.getElementById("current-date");
     const currentDate = new Date(); // Get current date
     const options = { year: 'numeric', month: 'long', day: 'numeric' }; // Format options
-    dateElement.textContent = `Current Date: ${currentDate.toLocaleDateString(undefined, options)}`+` ${currentDate.toLocaleTimeString()}`; // Update the HTML element
+    dateElement.textContent = `Current Date: ${currentDate.toLocaleDateString(undefined, options)} ${currentDate.toLocaleTimeString([],{hour: '2-digit', minute: '2-digit'})}`; // Update the HTML element
 }
 
 // Call the function to display the date
