@@ -186,6 +186,3 @@ input, select{
     border-color: white;
     transition: 2s !important;
 }
-.no-transition{
-    transition: none !important;
-}
