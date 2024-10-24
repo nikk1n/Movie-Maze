@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", function(){
             case 'low-grossing':
                 sortMovies('low');
                 break;
-            default:
-                resetMovies(); // Reset to the original order
-                break;
         }
     });
 
@@ -37,26 +34,18 @@ document.addEventListener("DOMContentLoaded", function(){
         container.innerHTML = ''; // Clear current movie cards
         movieCards.forEach(card => container.appendChild(card)); // Re-add sorted cards
     }
-
-    // Function to reset the movies to the original order
-    function resetMovies() {
-        movieCards = [...originalMovieCards]; // Reset movie cards to original order
-        container.innerHTML = ''; // Clear current movie cards
-        originalMovieCards.forEach(card => container.appendChild(card)); // Re-add cards in the original order
-    }
-
     // Function to extract and parse gross earnings from text
     function parseGross(grossText) {
         let gross = 0;
         if (grossText.includes('B')) {
-            // Convert billions to millions
-            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, "")) * 1000;
+            // Convert billions to thousands
+            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, "")) * 1000000;
         } else if (grossText.includes('M')) {
-            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, ""));
+            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, ""))*1000;
         } else {
             gross = parseFloat(grossText.replace(/[^0-9.-]+/g, ""));
         }
-        return gross; // Always return the value in millions
+        return gross; // Always return the value in thousands
     }
 
 
