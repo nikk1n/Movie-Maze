@@ -8,7 +8,6 @@ muteButton.addEventListener("click", function() {
     this.classList.toggle('bi-volume-up-fill')
     soundOn = !this.classList.toggle('bi-volume-mute-fill');
     localStorage.setItem("muted", soundOn)
-
 })
 function play(audio){
     if(soundOn) {
