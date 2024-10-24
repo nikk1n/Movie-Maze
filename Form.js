@@ -13,20 +13,21 @@ function showStep(stepInd){
         }
         if(stepInd===formSteps.length-1){
             nextButton.value="Register";
-            nextButton.type="submit"
         }else{
             nextButton.value="Next";
-            nextButton.type="button"
         }
     })
 }
 nextButton.addEventListener("click", function () {
+    if(validateForm()){
     if (currentStep < formSteps.length - 1) {
-        if(validateForm()){
         currentStep++;
         showStep(currentStep);
         }
+     else{
+        form.submit()
     }
+     }
 });
 prevButton.addEventListener("click", function () {
     if (currentStep > 0) {
