@@ -19,7 +19,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 50px;}
+    height: 30px;}
 
 a{
     text-decoration: none;
@@ -30,8 +30,8 @@ img{
     border:#F8F9FA;
 }
 footer p{
-    font-size:11px;
-    margin: auto;
+    font-size:8px;
+    margin-left: 43%;
 }
 iframe{
     width:560px;
@@ -185,4 +185,7 @@ input, select{
     color:white !important;
     border-color: white;
     transition: 2s !important;
+}
+fieldset{
+    display: none;
 }
