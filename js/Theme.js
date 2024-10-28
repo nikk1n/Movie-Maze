@@ -11,9 +11,9 @@ toggle.addEventListener('click', function(){
      this.classList.toggle('bi-moon');
      if(this.classList.toggle('bi-brightness-high-fill')){
          localStorage.setItem('dark','off');
-         stylesheet.href="Light.css"
+         stylesheet.href="stylesheets/Light.css"
      }else{
          localStorage.setItem('dark','on');
-         stylesheet.href="Dark.css"
+         stylesheet.href="stylesheets/Dark.css"
      }
 })
