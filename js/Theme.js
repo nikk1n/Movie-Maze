@@ -1,7 +1,6 @@
 //Find all elements
 const toggle = document.getElementById('toggleDark');
 const stylesheet=document.getElementById("style");
-console.log(stylesheet)
 if(theme==='on'){
     toggle.classList.toggle('bi-moon');
     toggle.classList.toggle('bi-brightness-high-fill');

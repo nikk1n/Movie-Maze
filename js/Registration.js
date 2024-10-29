@@ -2,7 +2,14 @@ const formSteps=document.querySelectorAll("fieldset");
 const prevButton=document.querySelector(".prev-button");
 const nextButton=document.querySelector(".next-button");
 let currentStep=0;
-const form=document.getElementById("registration");
+const registration=document.getElementById("registration");
+let f_name;
+let l_name;
+let email;
+let password;
+let conf_password;
+let country;
+let policy;
 
 function showStep(stepInd){
     formSteps.forEach((step,index)=>{
@@ -25,7 +32,7 @@ nextButton.addEventListener("click", function () {
         showStep(currentStep);
         }
      else{
-        form.submit()
+        registration.requestSubmit();
     }
      }
 });
@@ -37,16 +44,29 @@ prevButton.addEventListener("click", function () {
 });
 showStep(currentStep);
 
+registration.addEventListener("submit", function(event){
+    event.preventDefault();
+    if (validateForm()) {
+        localStorage.setItem("profileFirstName", f_name);
+        localStorage.setItem("profileLastName", l_name);
+        localStorage.setItem("profileEmail", email);
+        localStorage.setItem("profilePassword", password);
+        localStorage.setItem("profileCountry", country);
+        open("Profile.html","_self");
+    }
+})
+
+
 function validateForm(){
 //Find all elements
     let validity=true;
-    const f_name=document.forms["registration"]["f-name"].value
-    const l_name=document.forms["registration"]["l-name"].value
-    const email=document.forms["registration"]["email"].value
-    const password=document.forms["registration"]["password"].value
-    const conf_password=document.forms["registration"]["conf-password"].value
-    const country=document.forms["registration"]["country"].value
-    const policy=document.forms["registration"]["policy"].checked
+    f_name=document.forms["registration"]["f-name"].value
+    l_name=document.forms["registration"]["l-name"].value
+    email=document.forms["registration"]["email"].value
+    password=document.forms["registration"]["password"].value
+    conf_password=document.forms["registration"]["conf-password"].value
+    country=document.forms["registration"]["country"].value
+    policy=document.forms["registration"]["policy"].checked
     //Reset all errors
     document.getElementById("name-error").innerText=""
     document.getElementById("email-error").innerText=""

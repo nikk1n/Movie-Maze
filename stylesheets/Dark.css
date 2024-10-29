@@ -164,11 +164,11 @@ input[type=checkbox]{
 }
 #filterSection {
     position: absolute;
-    top: 130px; /* Distance from the top */
-    right: 50px; /* Distance from the right */
-    width: 200px; /* Width of the dropdown */
-    text-align: right; /* Align the content to the right */
-    z-index: 100; /* Ensure it appears above other elements */
+    top: 130px;
+    right: 50px;
+    width: 200px;
+    text-align: right;
+    z-index: 100;
 }
 
 #filterSelect {
@@ -180,12 +180,17 @@ input[type=checkbox]{
     border-color: black !important;
     transition: 2s;
 }
-input, select{
+input, select, .btn-primary,.faq-button{
     background-color: #555555 !important;
     color:white !important;
-    border-color: white;
+    border-color: white; !important;
     transition: 2s !important;
 }
-fieldset{
+fieldset, #profile-display, #password-change {
     display: none;
+}
+.profile-text{
+    background-color: #555555;
+    border: solid white;
+    transition: 2s;
 }

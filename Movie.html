@@ -21,7 +21,7 @@
           <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
           <li class="nav-item px-2"><a class="nav-link" href="Genres.html">Genres</a> </li>
           <li class="nav-item px-2"><a class="nav-link active" href="Movie.html">Random</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Profile.html">Register</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="Register.html" id="Profile">Register</a></li>
               <li class="nav-item px-2 ms-auto">
                   <i class="bi bi-volume-up-fill text-light mx-auto nav-link" id="toggleSound" title="Mute sounds"></i>
               </li>
@@ -53,14 +53,14 @@
                 <div class="input-group mt-3">
                 <label class="form-label" for="review-text">Review text</label><textarea class="form-control w-25" id="review-text" name="review-text" placeholder="Enter your review here" rows="10"></textarea>
                 </div>
-                <button class="btn btn-secondary mt-2" onclick=play("notif_Sound")> Submit </button>
+                <button class="btn btn-secondary mt-2"> Submit </button>
                  <audio id="notif_Sound" src="Audio/button_click.mp3" preload="auto"></audio>
 
             </form>
         </section>
         <section class="container mb-5 mt-5" id="Reviews"><h2>Reviews</h2><h3 id="Rating">☆ 4.6/5 ☆</h3>
             <div>
-            <a class="btn btn-secondary mx-auto w-25 d-block" id="Review" href="#review-popup" onclick=play("notif_Sound")>Leave a review</a>
+            <a class="btn btn-secondary mx-auto w-25 d-block" id="Review" href="#review-popup">Leave a review</a>
             </div>
             <div class="row-cols-auto">
             <p>Great movie! ☆☆☆☆☆</p>
@@ -87,5 +87,6 @@
     <script src="js/Theme.js"></script>
     <script src="js/Audio.js"></script>
     <script src="js/Hotkeys.js"></script>
+    <script src="js/Navigation.js"></script>
 </body>
 </html>

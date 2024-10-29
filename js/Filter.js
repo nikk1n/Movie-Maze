@@ -9,12 +9,20 @@ document.addEventListener("DOMContentLoaded", function(){
         switch (filter) {
             case 'high-grossing':
                 sortMovies('high');
+                localStorage.setItem("popularFilter","high-grossing");
                 break;
             case 'low-grossing':
                 sortMovies('low');
+                localStorage.setItem("popularFilter","low-grossing");
                 break;
         }
     });
+    function filterInit(){
+        //Sets the filter option to the one stored in local storage
+        let event=new Event('change')
+        filterSelect.value=localStorage.getItem("popularFilter")||"high-grossing";
+        filterSelect.dispatchEvent(event);
+    }
 
 
     function sortMovies(lala) {
@@ -38,15 +46,17 @@ document.addEventListener("DOMContentLoaded", function(){
     function parseGross(grossText) {
         let gross = 0;
         if (grossText.includes('B')) {
-            // Convert billions to thousands
-            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, "")) * 1000000;
+            // Convert all numbers
+            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, "")) * 1000000000;
         } else if (grossText.includes('M')) {
-            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, ""))*1000;
-        } else {
+            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, ""))*1000000;
+        } else if (grossText.includes('K')) {
+            gross = parseFloat(grossText.replace(/[^0-9.-]+/g, "")) * 1000;
+        }else{
             gross = parseFloat(grossText.replace(/[^0-9.-]+/g, ""));
         }
-        return gross; // Always return the value in thousands
+        return gross;
     }
-
+filterInit();
 
 });

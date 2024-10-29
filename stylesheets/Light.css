@@ -179,6 +179,6 @@ input[type=checkbox]{
 input,select{
     transition: 2s !important;
 }
-fieldset{
+fieldset, #profile-display, #password-change {
     display: none;
 }
