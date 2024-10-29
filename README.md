@@ -1,4 +1,6 @@
 Movie Maz
+
+
 Movie Maz is a web application for finding information about movies. It helps users discover interesting films and access useful details, such as ratings, descriptions, release dates, and more. The project is built using JavaScript, HTML, and CSS.
 
 Table of Contents:
@@ -23,7 +25,7 @@ find films based our aspects
 
 Features
 Movie Search: Allows users to quickly find movies .
-View Movie Details: Displays key information about the movie, such as rating, description, poster, and release date.
+View Movie Details: Displays key information about the movie, such as rating, description, poster, and gross.
 
 Contributing
 We welcome community contributions! To make changes to the project:
