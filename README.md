@@ -13,8 +13,7 @@ Installation
 Clone the repository to your computer:
 bash
 copy code:
-git clone https://github.com/your-username/movie-maz.git
-cd movie-maz
+https://nikk1n.github.io/Movie-Maze
 Open index.html in a browser to launch the application.
 
 Usage
