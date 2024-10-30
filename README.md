@@ -1,34 +1,43 @@
-Movie Maz
+# Movie Maze
 
 
-Movie Maz is a web application for finding information about movies. It helps users discover interesting films and access useful details, such as ratings, descriptions, release dates, and more. The project is built using JavaScript, HTML, and CSS.
+Movie Maze is a web application for finding information about movies. It helps users discover interesting films and access useful details, such as ratings, descriptions, release dates, and more. The project is built using JavaScript, HTML, and CSS.
 
-Table of Contents:
+### Table of Contents:
 
-Installation
-Usage
-Features
-Contributing
+1) Installation
+
+2) Usage
+
+3) Features
+
+4) Contributing
 
 
-Installation
+### Installation
+
 Clone the repository to your computer:
+
 bash
+
 copy code:
 https://nikk1n.github.io/Movie-Maze
+
 Open index.html in a browser to launch the application.
 
-Usage
+### Usage
 Open the application's main page.
-find films based our aspects 
+Find films based on our aspects 
 
 
-Features
+### Features
 Movie Search: Allows users to quickly find movies .
+
 View Movie Details: Displays key information about the movie, such as rating, description, poster, and gross.
 
-Contributing
+### Contributing
 We welcome community contributions! To make changes to the project:
+
 Fork the repository.
 Create a new branch for your feature (git checkout -b feature/your-feature).
 Make your changes and commit them (git commit -m 'Added genre search feature').

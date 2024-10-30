@@ -14,24 +14,28 @@
 <body>
 
     <header class="p-3"><h1>Movie Maze</h1></header>
-    <nav class="navbar-dark navbar-toggler-md navbar-expand bg-dark m-auto">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark m-auto">
         <div class="container-fluid">
-          <ul class="navbar-nav">
-          <li class="nav-item px-2"><a class="nav-link " href="index.html">Home</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Recommended.html">Recommended</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Genres.html">Genres</a> </li>
-          <li class="nav-item px-2"><a class="nav-link" href="Movie.html">Random</a></li>
-          <li class="nav-item px-2"><a class="nav-link active" href="Register.html">Register</a></li>
-              <li class="nav-item px-2 ms-auto">
-                  <i class="bi bi-volume-up-fill text-light mx-auto nav-link" id="toggleSound" title="Mute sounds"></i>
-              </li>
-              <li class="nav-item px-2">
-                  <i class="bi bi-brightness-high-fill nav-link" id="toggleDark" title="Change theme"></i>
-              </li>
-          </ul>
-        </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbar-toggle">
+                <a class="navbar-brand" href="index.html">Movie Maze</a>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="Recommended.html">Recommended</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="Genres.html">Genres</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="Movie.html">Random</a></li>
+                    <li class="nav-item px-2"><a class="nav-link active" href="Register.html" id="Profile">Register</a></li>
+                </ul>
+            </div>
+            <div class="d-flex ms-auto">
+                <i class="bi bi-volume-up-fill text-light me-2" id="toggleSound" title="Mute sounds"></i>
+                <i class="bi bi-brightness-high-fill text-light" id="toggleDark" title="Change theme"></i>
+            </div>
+        </div>
     </nav>
    <main class="mb-3">
     <section class="mt-2"><h2>Registration</h2>
@@ -40,13 +44,13 @@
                 <legend class="ms-3">Step 1: Enter your credentials</legend>
         <div class="input-group mb-4 ms-3">
             <span class="input-group-text">Name</span>
-            <label for="f-name" class="form-label">First Name</label><input type="text" id="f-name" name="f-name" class="form-control-md w-25" placeholder="Your first name">
-            <label for="l-name" class="form-label">Last Name</label><input type="text" id="l-name" name="l-name" class="form-control-md w-25" placeholder="Your last name">
+            <label for="f-name" class="form-label">First Name</label><input type="text" id="f-name" name="f-name" class="form-control-md w-50" placeholder="First name">
+            <label for="l-name" class="form-label">Last Name</label><input type="text" id="l-name" name="l-name" class="form-control-md w-50" placeholder="Last name">
             <p class="error-msg ms-5 position-absolute top-100" id="name-error"></p>
         </div>
           <div class="input-group mb-4 ms-3">
             <span class="input-group-text">E-mail</span>
-              <label for="email" class="form-label">E-mail</label><input type="email" id="email" name="email" class="form-control-md w-50" placeholder="Your e-mail"><br>
+              <label for="email" class="form-label">E-mail</label><input type="email" id="email" name="email" class="form-control-md w-75" placeholder="Your e-mail"><br>
               <p class="error-msg ms-5 position-absolute top-100" id="email-error"></p>
           </div>
             </fieldset>
@@ -54,19 +58,19 @@
                 <legend class="ms-3">Step 2: Come up with a password</legend>
           <div class="input-group mb-4 ms-3">
             <span class="input-group-text">Password</span>
-              <label for="password" class="form-label">Password</label><input type="password" id="password" name="password" class="form-control-md w-25" placeholder="At least 6 characters"><br>
+              <label for="password" class="form-label">Password</label><input type="password" id="password" name="password" class="form-control-md w-50" placeholder="At least 6 characters"><br>
               <p class="error-msg ms-5 position-absolute top-100" id="password-error"></p>
           </div>
             <div class="input-group mb-4 ms-3">
                 <span class="input-group-text">Confirm password</span>
-                <label for="conf-password" class="form-label">Confirm password</label><input type="password" id="conf-password" name="conf-password" class="form-control-md w-25" placeholder="Enter your password again"><br>
+                <label for="conf-password" class="form-label">Confirm password</label><input type="password" id="conf-password" name="conf-password" class="form-control-md w-50" placeholder="Enter your password again"><br>
                 <p class="error-msg ms-5 position-absolute top-100" id="conf-password-error"></p>
             </div>
             </fieldset>
             <fieldset>
                 <legend class="ms-3">Step 3: Choose your country</legend>
           <div class="input-group mb-4 ms-3">
-              <label for="country" class="form-label">Country</label><select list="countries" class="form-select-sm w-25" id="country" name="country">
+              <label for="country" class="form-label">Country</label><select list="countries" class="form-select-sm w-50" id="country" name="country">
                 <option value="" disabled selected hidden>Select your country</option>
                 <option value="Kazakhstan">Kazakhstan</option>
                 <option value="Russia">Russia</option>
@@ -92,15 +96,24 @@
 
 
 </main>
-    <footer class="d-flex"><p> Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br>
-        Contact us: +77053567623  MovieMaze@gmail.com
-        </p>
-        <p class="ms-auto me-3 mt-2" id="current-date">Current Date</p>
-        </footer>
+    <footer class="d-flex justify-content-center">
+        <div class="row w-100">
+            <div class="col d-flex justify-content-center">
+                <p class="text-center">
+                    Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br>
+                    Contact us: +77053567623  MovieMaze@gmail.com
+                </p>
+            </div>
+            <div class="col-auto">
+                <p class="me-3" id="current-date">Current Date</p>
+            </div>
+        </div>
+    </footer>
         <script src="js/Date.js"></script>
         <script src="js/Registration.js"></script>
         <script src="js/Theme.js"></script>
         <script src="js/Audio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/Hotkeys.js"></script>
     <script src="js/Navigation.js"></script>
 </body>

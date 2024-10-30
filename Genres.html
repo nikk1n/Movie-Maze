@@ -12,29 +12,36 @@
     <script src="js/Init.js"></script>
 </head>
 <body>
-    <header class="p-3"><h1>Movie Maze</h1></header>
-    <nav class="navbar-dark navbar-toggler-md navbar-expand bg-dark m-auto">
-        <div class="container-fluid">
-          <ul class="navbar-nav">
-          <li class="nav-item px-2"><a class="nav-link " href="index.html">Home</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Recommended.html">Recommended</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
-          <li class="nav-item px-2"><a class="nav-link active" href="Genres.html">Genres</a> </li>
-          <li class="nav-item px-2"><a class="nav-link" href="Movie.html">Random</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Register.html" id="Profile">Register</a></li>
-              <li class="nav-item px-2 ms-auto">
-                  <i class="bi bi-volume-up-fill text-light mx-auto nav-link" id="toggleSound" title="Mute sounds"></i>
-              </li>
-              <li class="nav-item px-2">
-                  <i class="bi bi-brightness-high-fill nav-link" id="toggleDark" title="Change theme"></i>
-              </li>
-          </ul>
+<header class="p-3 m-auto">
+    <h1>Movie Maze</h1>
+</header>
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark m-auto">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-toggle">
+            <a class="navbar-brand" href="index.html">Movie Maze</a>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="Recommended.html">Recommended</a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
+                <li class="nav-item px-2"><a class="nav-link active" href="Genres.html">Genres</a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="Movie.html">Random</a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="Register.html" id="Profile">Register</a></li>
+            </ul>
         </div>
-    </nav>
+        <div class="d-flex ms-auto">
+            <i class="bi bi-volume-up-fill text-light me-2" id="toggleSound" title="Mute sounds"></i>
+            <i class="bi bi-brightness-high-fill text-light" id="toggleDark" title="Change theme"></i>
+        </div>
+    </div>
+</nav>
     <main class="mb-3">
     <section class="mt-2"><h2>Genres</h2> <p class="subTitle">Here you can search through movie and show categories based on their genre</p></section>
        <div class="container">
-        <div class="row row-cols-6">
+        <div class="row row-cols-auto">
         <figure title="Involves a lot of action scenes like fighting,shoot-outs, car chases, etc."><figcaption><b>Action</b></figcaption><img class="Genres" src="Images/action.jpg" alt="Image of 3 cool people with guns"></figure>
         <figure title="Story revolves around a journey to exotic place, exploration or a quest"><figcaption><b>Adventure</b></figcaption><img class="Genres" src="Images/adventure.jpg" alt="5 adventurers in a jungle"></figure>
         <figure title="Uses drawn images instead of real actors"><figcaption><b>Animated</b></figcaption><img class="Genres" src="Images/animated.jpg" alt="animated grandpa and a kid with a dog flying on a balloon"></figure>
@@ -49,14 +56,23 @@
 </div>
 </div>
 </main>
-    <footer class="d-flex"><p> Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br>
-        Contact us: +77053567623  MovieMaze@gmail.com
-    </p>
-        <p class="ms-auto me-3 mt-2" id="current-date">Current Date</p>
+    <footer class="d-flex justify-content-center">
+        <div class="row w-100">
+            <div class="col d-flex justify-content-center">
+                <p class="text-center">
+                    Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br>
+                    Contact us: +77053567623  MovieMaze@gmail.com
+                </p>
+            </div>
+            <div class="col-auto">
+                <p class="me-3" id="current-date">Current Date</p>
+            </div>
+        </div>
     </footer>
     <script src="js/Date.js"></script>
     <script src="js/Theme.js"></script>
     <script src="js/Audio.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/Hotkeys.js"></script>
     <script src="js/Navigation.js"></script>
 </body>
