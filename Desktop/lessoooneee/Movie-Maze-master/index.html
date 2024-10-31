@@ -15,33 +15,38 @@
   <header class="p-3 m-auto">
       <h1>Movie Maze</h1>
   </header>
-  <nav class="navbar-dark navbar-toggler-md navbar-expand bg-dark m-auto">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark m-auto">
     <div class="container-fluid">
-      <ul class="navbar-nav">
-      <li class="nav-item px-2"><a class="nav-link active" href="index.html">Home</a></li>
-      <li class="nav-item px-2"><a class="nav-link" href="Recommended.html">Recommended</a></li>
-      <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
-      <li class="nav-item px-2"><a class="nav-link" href="Genres.html">Genres</a> </li>
-      <li class="nav-item px-2"><a class="nav-link" href="Movie.html">Random</a></li>
-      <li class="nav-item px-2"><a class="nav-link" href="Profile.html">Register</a></li>
-        <li class="nav-item px-2 ms-auto">
-          <i class="bi bi-volume-up-fill text-light mx-auto nav-link" id="toggleSound" title="Mute sounds"></i>
-        </li>
-        <li class="nav-item px-2">
-          <i class="bi bi-brightness-high-fill nav-link" id="toggleDark" title="Change theme"></i>
-        </li>
-      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar-toggle">
+        <a class="navbar-brand" href="index.html">Movie Maze</a>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item px-2"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="Recommended.html">Recommended</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="Genres.html">Genres</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="Movie.html">Random</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="Register.html" id="Profile">Register</a></li>
+        </ul>
+      </div>
+      <div class="d-flex ms-auto">
+        <i class="bi bi-volume-up-fill text-light me-2" id="toggleSound" title="Mute sounds"></i>
+        <i class="bi bi-brightness-high-fill text-light" id="toggleDark" title="Change theme"></i>
+      </div>
     </div>
-</nav>
+  </nav>
 <main class="mb-3">
   <section class="mt-3">
       <h2>Films, series and other without limitation</h2>
       <p class="subTitle">Subscription from 2500 ₸. You can cancel it at any time</p>
-        <div id="subscribe"><a href="Profile.html" class="btn btn-primary btn-lg d-block mx-auto w-25" role="button" onclick=play("notif_Sound")>Subscribe</a></div>
+        <div id="subscribe"><button href="Register.html" class="btn btn-primary btn-lg d-block mx-auto w-auto" role="button">Subscribe</button></div>
     <audio id="notif_Sound" src="Audio/button_click.mp3" preload="auto"></audio>
     </section>
 
-    <div id="carouselExampleRide" class="carousel slide w-25 m-auto mt-5" data-bs-ride="carousel" data-bs-interval="3000">
+    <div id="viewerCarousel" class="carousel slide m-auto mt-5 " data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="Images/solo.jpg" class="d-block w-100" alt="A single person watching movie">
@@ -60,45 +65,52 @@
           <b> Watch them with your family!</b>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#viewerCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#viewerCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  <div>
-    <a class="btn btn-primary ms-2" href="#faq-section" id="faq-toggle" onclick=play("notif_Sound")>FAQ</a>
+  <div class="mt-4">
+    <a class="btn btn-primary ms-2" href="#faq-section" id="faq-toggle">FAQ</a>
   </div>
   <section id="faq-section" class="faq mt-3">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
-      <div class="faq-button" onclick=play("notif_Sound")>What is Movie Maze?</div>
+      <div class="faq-button">What is Movie Maze?</div>
       <div class="faq-answer">
         <p>Movie Maze is an online platform that provides personalized movie recommendations based on your preferences.</p>
       </div>
     </div>
     <div class="faq-item">
-      <div class="faq-button" onclick=play("notif_Sound")>How do I create an account?</div>
+      <div class="faq-button">How do I create an account?</div>
       <div class="faq-answer">
-        <p>You can create an account by filling out the registration form on our <a class="text-decoration-underline" href="Profile.html">Register</a> page. It's quick and easy!</p>
+        <p>You can create an account by filling out the registration registration on our <a class="text-decoration-underline" href="Register.html">Register</a> page. It's quick and easy!</p>
       </div>
     </div>
     <div class="faq-item">
-      <div class="faq-button" onclick=play("notif_Sound")>Are there free movies on Movie Maze?</div>
+      <div class="faq-button">Are there free movies on Movie Maze?</div>
       <div class="faq-answer">
         <p>Some of the movies on Movie Maze are free. But for the full experience without limits you will need to <a class="text-decoration-underline" href=#subscribe>subscribe</a> for 2500 ₸ per month</p>
       </div>
     </div>
   </section>
-
   </main>
-  <footer class="d-flex"><p> Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br>
-    Contact us: +77053567623  MovieMaze@gmail.com
-  </p>
-    <p class="ms-auto me-3 mt-2" id="current-date">Current Date</p>
+  <footer class="d-flex justify-content-center">
+    <div class="row w-100">
+      <div class="col d-flex justify-content-center">
+        <p class="text-center">
+          Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br>
+          Contact us: +77053567623  MovieMaze@gmail.com
+        </p>
+      </div>
+      <div class="col-auto">
+        <p class="me-3" id="current-date">Current Date</p>
+      </div>
+    </div>
   </footer>
   <script src="js/Date.js"></script>
   <script src="js/Faq.js"></script>
@@ -106,5 +118,6 @@
   <script src="js/Theme.js"></script>
   <script src="js/Audio.js"></script>
 <script src="js/Hotkeys.js"></script>
+  <script src="js/Navigation.js"></script>
 </body>
 </html>

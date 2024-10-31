@@ -10,7 +10,7 @@ header {
     background-color: #333;
     color: white;
     text-align: center;
-
+    width:100%
 }
 footer {
     background-color: #333;
@@ -19,24 +19,26 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 30px;}
+    height: 1.875em;
+}
 
 a{
     text-decoration: none;
     color: white;
 }
 img{
-    border-radius: 8px;
+    border-radius: 0.5em;
     border:#F8F9FA;
 }
 footer p{
-    font-size:8px;
-    margin-left: 43%;
+    font-size:0.5em;
 }
 iframe{
-    width:560px;
-    height:315px;
+    width:35em;
+    height:19.688em;
     border:0;
+    max-height: 100%;
+    max-width: 100%;
 }
 h2,h3,.subTitle{
     text-align: center;
@@ -45,8 +47,8 @@ input[type=checkbox]{
     width:auto
 }
 .promImage,.Genres {
-    width: 200px;
-    height: 300px;
+    width: 12.5em;
+    height: 18.75em;
     transition: 0.4s;
 }
 
@@ -57,14 +59,14 @@ input[type=checkbox]{
     transform: scale(1.1);
 }
 #avg-viewer img{
-    width: 600px;
-    height:300px;
+    width: 37.5em;
+    height:18.75em;
 }
 #Reviews{
     background-color: #555555;
     color: white;
     overflow:auto;
-    height: 300px;
+    height: 18.75em;
     border: solid white;
     transition: 2s;
 }
@@ -72,29 +74,29 @@ input[type=checkbox]{
     color:rgb(92, 145, 13);
 }
 .Genres{
-    height: 150px;
+    height: 9.375em;
 } 
 .form-label{
     border: 0;
     clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
+    height: 0.063em;
+    margin: -0.063em;
     overflow: hidden;
     padding: 0;
     position: absolute;
-    width: 1px;
+    width: 0.063em;
 }
 .faq-button {
     width: 100%;
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 15px;
+    padding: 0.938em;
     text-align: left;
-    font-size: 18px;
+    font-size: 1.125em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
   }
 
   .faq-button:hover {
@@ -104,8 +106,8 @@ input[type=checkbox]{
   .faq-answer {
     display: none;
       transition: max-height 0.3s ease-out;
-    padding-left: 10px;
-     margin-bottom: 20px;
+    padding-left: 0.625em;
+     margin-bottom: 1.25em;
     
   }
   #faq-section{
@@ -113,7 +115,7 @@ input[type=checkbox]{
   }
   .error-msg{
       color: red;
-      font-size: 13px;
+      font-size: 0.813em;
   }
   #review-popup {
       display:none;
@@ -125,7 +127,8 @@ input[type=checkbox]{
       top:50%;
       left:50%;
       transform: translate(-50%,-50%);
-      width:50%;
+      width:35em;
+      max-width: 95%;
   }
   #review-popup textarea{
       background-color: #888888;
@@ -160,19 +163,12 @@ input[type=checkbox]{
 }
   main {
     flex: 2;
-    margin-bottom: 50px;
-}
-#filterSection {
-    position: absolute;
-    top: 130px; /* Distance from the top */
-    right: 50px; /* Distance from the right */
-    width: 200px; /* Width of the dropdown */
-    text-align: right; /* Align the content to the right */
-    z-index: 100; /* Ensure it appears above other elements */
+    margin-bottom: 3.125em;
 }
 
 #filterSelect {
     width: 100%;
+    max-width: 20em;
 }
 .card{
     background-color: black !important;
@@ -180,12 +176,29 @@ input[type=checkbox]{
     border-color: black !important;
     transition: 2s;
 }
-input, select{
+input, select, .btn-primary,.faq-button{
     background-color: #555555 !important;
     color:white !important;
-    border-color: white;
+    border-color: white; !important;
     transition: 2s !important;
 }
-fieldset{
+fieldset, #profile-display, #password-change {
     display: none;
+}
+.profile-text{
+    background-color: #555555;
+    border: white;
+    border-style: solid solid none solid;
+    transition: 2s; !important;
+    max-width: 15em;
+}
+.profile-text:nth-last-child(2){
+    border-bottom: solid;
+}
+#viewerCarousel{
+    max-width: 25em;
+    max-height: 15em;
+}
+input,select{
+    max-width:25em;
 }

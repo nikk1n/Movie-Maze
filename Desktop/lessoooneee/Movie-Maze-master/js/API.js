@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     async function fetchMovieData(movieTitle) {
         try {
             const response = await fetch(`${BASE_URL}?apikey=${API_KEY}&t=${encodeURIComponent(movieTitle)}`);
+
             if (!response.ok) throw new Error("Ошибка запроса");
             
             const data = await response.json();
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return null;
             }
 
-            console.log("data check:", data); // Проверка полученных данных
+            console.log("data check:", data); // get dateee
             return data;
         } catch (error) {
             console.error('Ошибка:', error);
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         titleElement.textContent = movie.Title || "Название не найдено";
         overviewElement.textContent = movie.Plot || "Описание не найдено";
-        posterElement.src = movie.Poster !== "N/A" ? movie.Poster : ""; // check for allowing poster
+        posterElement.src = movie.Poster !== "N/A" ? movie.Poster : ""; // check for allowing poste
 
         if (movie.Poster === "N/A") {
             posterElement.alt = "Постер недоступен";

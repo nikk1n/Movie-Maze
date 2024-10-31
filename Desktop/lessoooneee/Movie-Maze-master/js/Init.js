@@ -8,6 +8,6 @@ let fetchStyle=function(){
     } else {
         new_stylesheet.href = "stylesheets/Light.css";
     }
-    document.head.appendChild(new_stylesheet)
+    document.head.appendChild(new_stylesheet);
 }
-fetchStyle()
+fetchStyle();
