@@ -52,7 +52,7 @@ registration.addEventListener("submit", function(event){
         localStorage.setItem("profileEmail", email);
         localStorage.setItem("profilePassword", password);
         localStorage.setItem("profileCountry", country);
-        open("Profile.html","_self");
+        location.reload();
     }
 })
 
@@ -68,7 +68,8 @@ function validateForm(){
     country=document.forms["registration"]["country"].value
     policy=document.forms["registration"]["policy"].checked
     //Reset all errors
-    document.getElementById("name-error").innerText=""
+    document.getElementById("first-name-error").innerText=""
+    document.getElementById("last-name-error").innerText=""
     document.getElementById("email-error").innerText=""
     document.getElementById("password-error").innerText=""
     document.getElementById("conf-password-error").innerText=""
@@ -79,11 +80,11 @@ function validateForm(){
         case 0:
             //Not empty names validation
             if(f_name===""){
-                document.getElementById("name-error").innerText="Please enter your first name"
+                document.getElementById("first-name-error").innerText="Please enter your first name"
                 validity=false;
             }
             if(l_name===""){
-                document.getElementById("name-error").innerText="Please enter your last name"
+                document.getElementById("last-name-error").innerText="Please enter your last name"
                 validity=false;
             }
             //Not empty email validation

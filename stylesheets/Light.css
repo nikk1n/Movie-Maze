@@ -120,7 +120,7 @@ input[type=checkbox]{
       color: red;
       font-size: 0.813em;
   }
-  #review-popup {
+  .popup {
       display:none;
       opacity:0;
       position: fixed;
@@ -130,10 +130,10 @@ input[type=checkbox]{
       top:50%;
       left:50%;
       transform: translate(-50%,-50%);
-      width:35em;
-      max-width: 95%;
+      width:50em;
+      max-width: 97%;
   }
-#overlay {
+.overlay {
     position: fixed;
     display: none;
     width: 100%;
@@ -165,7 +165,7 @@ input[type=checkbox]{
     margin-bottom: 3.125em;
 }
 
-#filterSelect {
+#filterSelect,#filterSelect option {
     width: 100%;
     max-width: 20em;
 }
@@ -182,7 +182,7 @@ fieldset, #profile-display, #password-change {
     border:black;
     border-style: solid solid none solid;
     transition: 2s; !important;
-    max-width: 15em;
+    max-width: 35em;
     background-color: lightgray;
 }
 .profile-text:nth-last-child(2){
@@ -194,4 +194,7 @@ fieldset, #profile-display, #password-change {
 }
 input,select{
     max-width:25em;
+}
+.input-group-text{
+    width: 12em;
 }

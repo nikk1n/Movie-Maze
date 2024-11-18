@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //Find elements
   const reviewToggleButton=document.getElementById("Review");
   const reviewPopup=document.getElementById("review-popup")
-    const overlay=document.getElementById("overlay")
+    const overlay=document.querySelector(".overlay")
   reviewToggleButton.addEventListener("click", ()=> {
       //Toggle review popup through button
       if(reviewPopup.style.display === "none" || reviewPopup.style.display===""){

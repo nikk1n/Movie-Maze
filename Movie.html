@@ -27,17 +27,17 @@
                 <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
                 <li class="nav-item px-2"><a class="nav-link" href="Genres.html">Genres</a></li>
                 <li class="nav-item px-2"><a class="nav-link  active" href="Movie.html">Search</a></li>
-                <li class="nav-item px-2"><a class="nav-link" href="Register.html" id="Profile">Register</a></li>
             </ul>
         </div>
         <div class="d-flex ms-auto">
+            <button class="bg-dark border-0 text-light me-3" id="Profile">Register</button>
             <i class="bi bi-volume-up-fill text-light me-2" id="toggleSound" title="Mute sounds"></i>
             <i class="bi bi-brightness-high-fill text-light" id="toggleDark" title="Change theme"></i>
         </div>
     </div>
 </nav>
 <main class="mb-3">
-    <div id="overlay"></div>
+    <div class="overlay"></div>
     <section class="mt-2 ms-2 d-flex flex-column align-items-center w-100">
         <h2>Search any movie that you want</h2>
 
@@ -47,10 +47,10 @@
         </form>
 
         <h2 id="movie-title"></h2>
-        <img id="movie-poster" style="max-width: 300px; margin-top: 10px;" alt="found movie poster">
+        <img id="movie-poster" style="max-width: 300px; margin-top: 10px;">
         <p class=" container-md mt-2 w-75 mx-auto text-wrap text-break" id="movie-overview"></p>
     </section>
-    <section id="review-popup" class="p-3 shown">
+    <section class="p-3 popup shown" id="review-popup">
         <h2>Leave review</h2>
         <form>
             <div>

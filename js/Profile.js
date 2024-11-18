@@ -12,7 +12,7 @@ const changePasswordBackButton=document.getElementById("back");
 const changePassword=document.getElementById("password-change");
 function fetchProfileData(){
     //Gets all profile data from storage
-    profileName.innerText=localStorage.getItem("profileFirstName")+localStorage.getItem("profileLastName");
+    profileName.innerText=localStorage.getItem("profileFirstName")+' '+localStorage.getItem("profileLastName");
     profileEmail.innerText=localStorage.getItem("profileEmail")
     profileCountry.innerText=localStorage.getItem("profileCountry");
     if(localStorage.getItem("loggedIn")==="true"){
@@ -67,7 +67,7 @@ deleteAccountButton.addEventListener("click", function(){
     localStorage.removeItem("profileEmail");
     localStorage.removeItem("profilePassword");
     localStorage.removeItem("profileCountry");
-    open("Register.html","_self");
+    location.reload();
 })
 changePasswordBackButton.addEventListener("click",function(){
     //Returns to profile page
