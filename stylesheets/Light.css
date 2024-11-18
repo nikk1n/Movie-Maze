@@ -50,12 +50,12 @@ h2,h3,.subTitle{
 input[type=checkbox]{
     width:auto
 }
-.promImage,.Genres {
-    width: 12.5em;
-    height: 18.75em;
+.promImage{
+    width: 100%;
+    height: 17em;
+    max-width: 12.5em;
     transition: 0.4s;
 }
-
 .promImage:hover,.Genres:hover {
     transform: scale(1.05);
 }
@@ -77,7 +77,9 @@ input[type=checkbox]{
     color:rgb(92, 145, 13);
 }
 .Genres{
-    height: 9.375em;
+    width: 100%;
+    max-width: 12.5em;
+    height: 8em;
 } 
 .form-label{
     border: 0;
@@ -197,4 +199,8 @@ input,select{
 }
 .input-group-text{
     width: 12em;
+}
+#recommended .card,#genres .card,#popular .card{
+    width:43%;
+    max-width: 230px;
 }
