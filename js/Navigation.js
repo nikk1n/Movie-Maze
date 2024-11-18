@@ -9,7 +9,7 @@ let checkProfile=function (){
     }
 }
 checkProfile();
-// Function to load the login popup dynamically
+// Load the login popup dynamically
 function loadRegisterPopup() {
     fetch('Register.html')
         .then((response) => response.text())
@@ -30,12 +30,14 @@ function loadRegisterPopup() {
                 popup.style.opacity='0';
                 overlay.style.display='none';
             })
+            //Add logic for registration elements
              let registration=document.createElement('script')
             registration.src='js/Registration.js'
             document.body.appendChild(registration)
         })
         .catch((error) => console.error('Error loading login popup:', error));
 }
+//Load the profile popup dynamically
 function loadProfilePopup() {
     fetch('Profile.html')
         .then((response) => response.text())
@@ -62,6 +64,7 @@ function loadProfilePopup() {
                 popup.style.opacity='0';
                 overlay.style.display='none';
             })
+            //Add logic for profile elements
             let login=document.createElement('script')
             login.src='js/Profile.js'
             document.body.appendChild(login)
@@ -80,6 +83,7 @@ function loadPopup(){
     }
 }
 loadPopup()
+//Add event listener to profile link
 profileLink.addEventListener('click', function(){
     let popup;
     if(localStorage.getItem("profileFirstName")!=null){

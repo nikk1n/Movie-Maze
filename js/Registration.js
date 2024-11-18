@@ -87,11 +87,18 @@ function validateForm(){
                 document.getElementById("last-name-error").innerText="Please enter your last name"
                 validity=false;
             }
-            //Not empty email validation
-            if(email===""){
-                document.getElementById("email-error").innerText="Please enter your email"
-                validity=false;
+            //Check email format
+            const re = /^\S+@\S+$/;
+            if(!re.test(email)){
+                document.getElementById("email-error").innerText = "Incorrect email format"
+                validity = false;
             }
+            //Not empty email validation
+            if(email==="") {
+                document.getElementById("email-error").innerText = "Please enter your email"
+                validity = false;
+            }
+
             break;
         case 1:
             //Password length validation
