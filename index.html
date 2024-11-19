@@ -1,118 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie Maze</title>
-  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="stylesheets/Light.css" rel="preload" as="style">
-  <link href="stylesheets/Dark.css" rel="preload" as="style">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><h1>Movie Maze</h1></title>
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico" />
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+  />
+  <link href="stylesheets/Light.css" rel="preload" as="style" />
+  <link href="stylesheets/Dark.css" rel="preload" as="style" />
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="js/Init.js"></script>
 </head>
 <body>
-  <header class="p-3 m-auto">
-      <h1>Movie Maze</h1>
-  </header>
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark m-auto">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<header class="p-3 w-10">
+  <h1>Movie Maze</h1>
+</header>
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark m-auto">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbar-toggle">
-        <a class="navbar-brand" href="index.html">Movie Maze</a>
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item px-2"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Recommended.html">Recommended</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Genres.html">Genres</a></li>
-          <li class="nav-item px-2"><a class="nav-link" href="Movie.html">Search</a></li>
-        </ul>
-      </div>
-      <div class="d-flex ms-auto">
-        <button class="bg-dark border-0 text-light me-3" id="Profile">Register</button>
-        <i class="bi bi-volume-up-fill text-light me-2" id="toggleSound" title="Mute sounds"></i>
-        <i class="bi bi-brightness-high-fill text-light" id="toggleDark" title="Change theme"></i>
-      </div>
+    <div class="collapse navbar-collapse" id="navbar-toggle">
+      <a class="navbar-brand" href="index.html">Movie Maze</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item px-2"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="Recommended.html">Recommended</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="Popular.html">Popular</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="Genres.html">Genres</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="Movie.html">Search</a></li>
+      </ul>
     </div>
-  </nav>
+    <div class="d-flex ms-auto">
+      <button class="bg-dark border-0 text-light me-3" id="Profile">Register</button>
+      <i class="bi bi-volume-up-fill text-light me-2" id="toggleSound" title="Mute sounds"></i>
+      <i class="bi bi-brightness-high-fill text-light" id="toggleDark" title="Change theme"></i>
+    </div>
+  </div>
+</nav>
 <main class="mb-3">
-  <section class="mt-3">
-      <h2>Films, series and other without limitation</h2>
-      <p class="subTitle">Subscription from 2500 ₸. You can cancel it at any time</p>
-    <audio id="notif_Sound" src="Audio/button_click.mp3" preload="auto"></audio>
-    </section>
-
-    <div id="viewerCarousel" class="carousel slide m-auto mt-5 " data-bs-ride="carousel" data-bs-interval="3000">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="Images/solo.jpg" class="d-block w-100" alt="A single person watching movie">
-          <b>Watch them alone!</b>
-        </div>
-        <div class="carousel-item">
-          <img src="Images/couple.jpg" class="d-block w-100" alt="Happy couple watching a movie">
-          <b>Watch them with your soulmate!</b>
-        </div>
-        <div class="carousel-item">
-          <img src="Images/friends2.jpg" class="d-block w-100" alt="A bunch of happy friends watching a movie">
-          <b>Watch them with your friends!</b>
-        </div>
-        <div class="carousel-item">
-          <img src="Images/avgviewer.jpg" class="d-block w-100" alt="A happy family watching movies">
-          <b> Watch them with your family!</b>
+  <!-- Updated Carousel -->
+  <div id="movieCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="Images/SR.jpg" class="d-block w-100" style="object-fit: cover; height: 100%;" alt="The Shawshank Redemption">
+        <div class="carousel-caption d-md-block text-start">
+          <h5>The Shawshank Redemption</h5>
+          <p>1994 - Drama/Crime</p>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#viewerCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#viewerCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="Images/Inception.jpg" class="d-block w-100" style="object-fit: cover; height: 100%;" alt="Inception">
+        <div class="carousel-caption d-md-block text-start">
+          <h5>Inception</h5>
+          <p>2010 - Action/Sci-Fi</p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="Images/Dark_Knight.jpg" class="d-block w-100" style="object-fit: cover; height: 100%;" alt="The Dark Knight">
+        <div class="carousel-caption d-md-block text-start">
+          <h5>The Dark Knight</h5>
+          <p>2008 - Action/Crime</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <!-- FAQ Section -->
   <div class="mt-4">
-    <a class="btn btn-primary ms-2" href="#faq-section" id="faq-toggle">FAQ</a>
+    <a class="btn btn-primary ms-2" href="#faq-section" id="faq-toggle"
+    >FAQ</a
+    >
   </div>
   <section id="faq-section" class="faq mt-3">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <div class="faq-button">What is Movie Maze?</div>
       <div class="faq-answer">
-        <p>Movie Maze is an online platform that provides personalized movie recommendations based on your preferences.</p>
+        <p>
+          Movie Maze is an online platform that provides personalized movie
+          recommendations based on your preferences.
+        </p>
       </div>
     </div>
     <div class="faq-item">
       <div class="faq-button">How do I create an account?</div>
       <div class="faq-answer">
-        <p>You can create an account by filling out the registration registration on our register page. It's quick and easy!</p>
+        <p>
+          You can create an account by filling out the registration
+          registration on our
+          <a class="text-decoration-underline" href="Register.html"
+          >Register</a
+          >
+          page. It's quick and easy!
+        </p>
       </div>
     </div>
     <div class="faq-item">
       <div class="faq-button">Are there free movies on Movie Maze?</div>
       <div class="faq-answer">
-        <p>Some of the movies on Movie Maze are free. But for the full experience without limits you will need to subscribe for 2500 ₸ per month</p>
-      </div>
-    </div>
-  </section>
-  </main>
-  <footer class="d-flex justify-content-center">
-    <div class="row w-100">
-      <div class="col d-flex justify-content-center">
-        <p class="text-center">
-          Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br>
-          Contact us: +77053567623  MovieMaze@gmail.com
+        <p>
+          Some of the movies on Movie Maze are free. But for the full
+          experience without limits you will need to
+          <a class="text-decoration-underline" href="#subscribe"
+          >subscribe</a
+          >
+          for 2500 ₸ per month
         </p>
       </div>
     </div>
-  </footer>
-  <script src="js/Faq.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="js/Theme.js"></script>
-  <script src="js/Audio.js"></script>
+  </section>
+  <!-- Top 10 Movies Section -->
+
+
+  <section class="mt-5">
+    <div class="container px-5">
+      <h2 class="text-center mb-4">Top 10 Movies of All Time</h2>
+      <p class="text-center mb-5 text-muted">
+        Here are some of the most iconic movies loved by audiences worldwide:
+      </p>
+      <div class="position-relative">
+        <!-- Карусель -->
+        <div id="topMoviesCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Первый слайд -->
+            <div class="carousel-item active">
+              <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/ShawshankRedemptionMoviePoster.jpg" class="card-img-top rounded" alt="The Shawshank Redemption">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">The Shawshank Redemption</h6>
+                      <p class="card-text">1994 - Drama/Crime</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Godfather.jpg" class="card-img-top rounded" alt="The Godfather">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">The Godfather</h6>
+                      <p class="card-text">1972 - Crime/Drama</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Dark_Knight.jpg" class="card-img-top rounded" alt="The Dark Knight">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">The Dark Knight</h6>
+                      <p class="card-text">2008 - Action/Crime</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Slist.jpg" class="card-img-top rounded" alt="Schindler's List">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Schindler's List</h6>
+                      <p class="card-text">1993 - Biography/Drama</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Pulp.jpg" class="card-img-top rounded" alt="Pulp Fiction">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Pulp Fiction</h6>
+                      <p class="card-text">1994 - Crime/Drama</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Второй слайд -->
+            <div class="carousel-item">
+              <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Rings.jpg" class="card-img-top rounded" alt="The Lord of the Rings: The Return of the King">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">The Lord of the Rings: The Return of the King</h6>
+                      <p class="card-text">2003 - Adventure/Fantasy</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Forrest_gump.jpg" class="card-img-top rounded" alt="Forrest Gump">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Forrest Gump</h6>
+                      <p class="card-text">1994 - Drama/Romance</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Inception.jpg" class="card-img-top rounded" alt="Inception">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Inception</h6>
+                      <p class="card-text">2010 - Action/Sci-Fi</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Figth_club.jpg" class="card-img-top rounded" alt="Fight Club">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Fight Club</h6>
+                      <p class="card-text">1999 - Drama</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Matrix.jpg" class="card-img-top rounded" alt="The Matrix">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">The Matrix</h6>
+                      <p class="card-text">1999 - Action/Sci-Fi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Кнопки управления -->
+          <button class="carousel-control-prev position-absolute top-50 start-0 translate-middle-y" type="button" data-bs-target="#topMoviesCarousel" data-bs-slide="prev" style="z-index: 10;">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next position-absolute top-50 end-0 translate-middle-y" type="button" data-bs-target="#topMoviesCarousel" data-bs-slide="next" style="z-index: 10;">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-5">
+    <div class="container px-5">
+      <h2 class="text-center mb-4">Upcoming Movies of 2025</h2>
+      <p class="text-center mb-5 text-muted">
+        Check out the most anticipated movies set to release in 2025. See how much time is left until their premiere!
+      </p>
+      <div class="position-relative">
+        <!-- Carousel -->
+        <div id="upcomingMoviesCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active">
+              <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Captain_America_Brave_New_World_poster.jpg" class="card-img-top rounded" alt="Movie 1">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 1</h6>
+                      <p class="card-text">Release Date: 2025-03-15</p>
+                      <p class="card-text text-warning" id="countdown-movie1"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Ochi.jpg" class="card-img-top rounded" alt="Movie 2">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 2</h6>
+                      <p class="card-text">Release Date: 2025-07-20</p>
+                      <p class="card-text text-warning" id="countdown-movie2"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/A_Minecraft_Movie_poster.jpg" class="card-img-top rounded" alt="Movie 3">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 3</h6>
+                      <p class="card-text">Release Date: 2025-11-05</p>
+                      <p class="card-text text-warning" id="countdown-movie3"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/The_Amateur_2025_poster.jpg" class="card-img-top rounded" alt="Movie 4">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 4</h6>
+                      <p class="card-text">Release Date: 2025-09-10</p>
+                      <p class="card-text text-warning" id="countdown-movie4"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Mission_Impossible_–_The_Final_Reckoning_Poster.jpg" class="card-img-top rounded" alt="Movie 5">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 5</h6>
+                      <p class="card-text">Release Date: 2025-12-25</p>
+                      <p class="card-text text-warning" id="countdown-movie5"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Second Slide -->
+            <div class="carousel-item">
+              <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Avatar-Fire-And-Ash-Movie-Logo-283x503.jpg" class="card-img-top rounded" alt="Movie 6">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 6</h6>
+                      <p class="card-text">Release Date: 2025-05-01</p>
+                      <p class="card-text text-warning" id="countdown-movie6"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Bride.jpg" class="card-img-top rounded" alt="Movie 7">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 7</h6>
+                      <p class="card-text">Release Date: 2025-08-15</p>
+                      <p class="card-text text-warning" id="countdown-movie7"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/oooo.jpg" class="card-img-top rounded" alt="Movie 8">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 8</h6>
+                      <p class="card-text">Release Date: 2025-10-01</p>
+                      <p class="card-text text-warning" id="countdown-movie8"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/Batman.jpg" class="card-img-top rounded" alt="Movie 9">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 9</h6>
+                      <p class="card-text">Release Date: 2025-04-20</p>
+                      <p class="card-text text-warning" id="countdown-movie9"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow">
+                    <img src="Images/JJJ.jpg" class="card-img-top rounded" alt="Movie 10">
+                    <div class="card-body text-center">
+                      <h6 class="card-title">Movie 10</h6>
+                      <p class="card-text">Release Date: 2025-06-30</p>
+                      <p class="card-text text-warning" id="countdown-movie10"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev position-absolute top-50 start-0 translate-middle-y" type="button" data-bs-target="#upcomingMoviesCarousel" data-bs-slide="prev" style="z-index: 10;">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next position-absolute top-50 end-0 translate-middle-y" type="button" data-bs-target="#upcomingMoviesCarousel" data-bs-slide="next" style="z-index: 10;">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="d-flex justify-content-center">
+  <div class="row w-100">
+    <div class="col d-flex justify-content-center">
+      <p class="text-center">
+        Moiseychenko Nikita, Aziz Abdulin, Arsen Bayakhmet 09.09.2024<br />
+        Contact us: +77053567623 MovieMaze@gmail.com
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="js/Date.js"></script>
+<script src="js/Faq.js"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"
+></script>
+<script src="js/Theme.js"></script>
+<script src="js/Audio.js"></script>
 <script src="js/Hotkeys.js"></script>
-  <script src="js/Navigation.js"></script>
-</body>
-</html>
+<script src="js/Navigation.js"></script>
+<script src="js/MovieCountdown.js"></script>
