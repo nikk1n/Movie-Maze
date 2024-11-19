@@ -1,16 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F8F9FA;
-    margin:0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
     overflow-x: hidden;
-    transition: 2s;
+    transition: 0.5s ease-in-out;
 }
 header {
-    background-color: #333;
-    color: white;
+    background-color: #f4f4f4; /* Светло-серый фон */
+    color: #ff9800; /* Оранжевый текст */
     text-align: center;
-    width:100%
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    font-weight: bold; /* Делает заголовок жирным */
 
+}
+header h1 {
+    font-weight: bold;
+    color: #ff9800;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+}
+/* Navbar Styling */
+nav {
+    background-color: #f8f9fa; /* Светло-серый фон навбара */
+    border-bottom: 2px solid #ff9800; /* Оранжевая линия внизу навбара */
+}
+
+.navbar-light .navbar-brand {
+    color: #ff9800; /* Оранжевый цвет для "Movie Maze" */
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333333; /* Тёмно-серый текст */
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #ff9800; /* Оранжевый для активной ссылки */
+}
+
+/* Hover эффекты */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff9800; /* Оранжевый при наведении */
+}
+
+.navbar-toggler {
+    background-color: #ff9800; /* Оранжевый цвет кнопки навигации */
+    border: none;
+}
+
+/* Заголовки */
+h1, h2, h5 {
+    color: #ff9800; /* Оранжевый для заголовков */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Лёгкая тень текста */
 }
 footer {
     background-color: #333;
@@ -24,8 +69,153 @@ footer {
 
 a{
     text-decoration: none;
-    color: black;
+    color: #333333; /* Тёмно-серый текст ссылок */
+    transition: color 0.3s ease;
 }
+a:hover {
+    color: #ff9800; /* Оранжевый при наведении */
+}
+/* Кнопки */
+button, .btn-primary {
+    background-color: #ff9800; /* Оранжевый цвет кнопок */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: #ffa726; /* Светлее оранжевый при наведении */
+}
+
+/* Карусели */
+.carousel {
+    margin-top: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 400px;
+    transition: transform 0.5s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный белый фон */
+    color: #333333; /* Тёмно-серый текст */
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Карточки */
+.card {
+    background-color: #f9f9f9; /* Светлый фон карточек */
+    color: #333333; /* Тёмно-серый текст */
+    border: 1px solid #ff9800; /* Оранжевая рамка */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(255, 152, 0, 0.2);
+}
+
+.card-img-top {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+
+/* FAQ */
+.faq {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.faq .faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq .faq-button {
+    background-color: #ff9800;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.faq .faq-button:hover {
+    background-color: #ffa726;
+}
+
+.faq .faq-answer {
+    display: none;
+    padding: 1rem;
+    border: 1px solid #ff9800;
+    border-radius: 5px;
+    background-color: #ffffff; /* Белый фон */
+    margin-top: 0.5rem;
+    color: #333333; /* Тёмный текст */
+}
+
+.faq .faq-answer p {
+    margin: 0;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: transparent !important; /* Прозрачный фон */
+    box-shadow: none; /* Убираем тень */
+    transform: scale(1.1); /* Только увеличение */
+}
+/* Управление каруселью */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #ff9800; /* Оранжевая рамка */
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    filter: brightness(1.5);
+}
+
+/* Полосы прокрутки */
+.scrollable-movies {
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ff9800 #f4f4f4;
+}
+
+.scrollable-movies::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable-movies::-webkit-scrollbar-thumb {
+    background-color: #ff9800;
+    border-radius: 10px;
+}
+
+.scrollable-movies::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
 img{
     border-radius: 0.5em;
     border:#F8F9FA;
@@ -56,6 +246,7 @@ input[type=checkbox]{
     max-width: 12.5em;
     transition: 0.4s;
 }
+
 .promImage:hover,.Genres:hover {
     transform: scale(1.05);
 }
@@ -80,7 +271,7 @@ input[type=checkbox]{
     width: 100%;
     max-width: 12.5em;
     height: 8em;
-} 
+}
 .form-label{
     border: 0;
     clip: rect(0 0 0 0);
@@ -102,39 +293,39 @@ input[type=checkbox]{
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-bottom: 0.625em;
-  }
+}
 
-  .faq-button:hover {
+.faq-button:hover {
     background-color: #0056b3;
-  }
+}
 
-  .faq-answer {
+.faq-answer {
     display: none;
-      transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease-out;
     padding-left: 0.625em;
-     margin-bottom: 1.25em;
-    
-  }
-  #faq-section{
-      display: none;
-  }
-  .error-msg{
-      color: red;
-      font-size: 0.813em;
-  }
-  .popup {
-      display:none;
-      opacity:0;
-      position: fixed;
-      background-color:#d8d6d6;
-      z-index: 9;
-      border:solid;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-      width:50em;
-      max-width: 97%;
-  }
+    margin-bottom: 1.25em;
+
+}
+#faq-section{
+    display: none;
+}
+.error-msg{
+    color: red;
+    font-size: 0.813em;
+}
+.popup {
+    display:none;
+    opacity:0;
+    position: fixed;
+    background-color:#d8d6d6;
+    z-index: 9;
+    border:solid;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:50em;
+    max-width: 97%;
+}
 .overlay {
     position: fixed;
     display: none;
@@ -162,7 +353,7 @@ input[type=checkbox]{
 .checked:hover{
     color: darkorange;
 }
-  main {
+main {
     flex: 2;
     margin-bottom: 3.125em;
 }
@@ -187,6 +378,7 @@ fieldset, #profile-display, #password-change {
     max-width: 35em;
     background-color: lightgray;
 }
+
 .profile-text:nth-last-child(2){
     border-bottom: solid;
 }
@@ -196,6 +388,156 @@ fieldset, #profile-display, #password-change {
 }
 input,select{
     max-width:25em;
+}
+.input-group-text{
+    width: 12em;
+}
+/* Стили для карточек фильмов */
+.movie-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 100%; /* карточки занимают всю ширину */
+    max-width: 240px; /* Ограничиваем максимальную ширину карточек */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block
+}
+
+.movie-card img {
+    width: 100%;  /* Устанавливаем постеры на всю ширину карточки */
+    height: 320px; /* фиксированная высота для постеров */
+    object-fit: cover;  /* Обеспечиваем, чтобы изображение сохраняло пропорции */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.movie-card h5 {
+    font-size: 1rem; /* уменьшили размер текста названия фильма */
+    margin-bottom: 5px;
+    font-weight: bold; /* добавили жирность для названия */
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для контейнера с результатами поиска */
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px; /* Добавляем промежутки между карточками */
+}
+
+/* Стили для формы поиска */
+#search-form {
+    margin-bottom: 20px;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .movie-card {
+        width: calc(50% - 40px); /* карточки занимают 50% ширины, оставляем промежутки */
+        margin: 10px 0; /* меньшие отступы */
+    }
+
+    .movie-card img {
+        height: 220px; /* уменьшение высоты изображения для мобильных */
+    }
+
+    #search-form input {
+        font-size: 14px;
+    }
+
+    #search-form button {
+        font-size: 14px;
+    }
+}
+
+/* Стили для больших экранов (например, планшетов и ноутбуков) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .movie-card {
+        width: 45%; /* карточки занимают 45% ширины на устройствах среднего размера */
+    }
+}
+
+/* Стили для очень больших экранов */
+@media (min-width: 1200px) {
+    .movie-card {
+        width: 23%; /* карточки занимают 23% ширины на больших экранах */
+    }
+}
+
+/* Стили для карусели */
+
+.img-carousel {
+    width: 80%; /* или любая другая подходящая ширина */
+    margin: 0 auto; /* для центрирования изображения */
+    height: 550px; /* фиксированная высота для картинок */
+    object-fit: cover; /* чтобы картинка заполнила контейнер без искажения */
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 158px;
+    bottom: 10px;
+    padding: 5px;
+    text-align: left;
+    width: 30%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон для текста */
+}
+
+.carousel-caption h5 {
+    font-size: 2rem; /* Размер заголовка */
+    font-weight: bold;
+}
+
+.carousel-caption .subscribe-btn {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Настройка адаптивности */
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 1.5rem; /* Меньший размер текста на мобильных устройствах */
+    }
+
+    .carousel-caption .subscribe-btn {
+        font-size: 0.9rem; /* Меньше кнопка на мобильных устройствах */
+    }
+}
+
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.carousel-arrow-left {
+    left: 110px;
+}
+
+.carousel-arrow-right {
+    right: 10px;
+}
+.form-control-md,.form-control, select{
+    max-width:23em;
+    width: 45%;
 }
 .input-group-text{
     width: 12em;
