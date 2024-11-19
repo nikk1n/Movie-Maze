@@ -8,7 +8,7 @@ body {
 }
 header {
     background-color: #333;
-    color: white;
+    color: orange;
     text-align: center;
     width:100%
 }
@@ -182,13 +182,13 @@ input[type=checkbox]{
 input, select, .btn-primary,.faq-button{
     background-color: #555555 !important;
     color:white !important;
-    border-color: white; !important;
+    border-color: white, !important;
     transition: 2s !important;
 }
 .input-group-text{
     background-color: #777777 !important;
     color:white !important;
-    border-color: white; !important;
+    border-color: white, !important;
     transition: 2s
 }
 fieldset, #profile-display, #password-change {
@@ -198,7 +198,7 @@ fieldset, #profile-display, #password-change {
     background-color: #555555;
     border: white;
     border-style: solid solid none solid;
-    transition: 2s; !important;
+    transition: 2s, !important;
     max-width: 15em;
 }
 .profile-text:nth-last-child(2){
@@ -217,4 +217,28 @@ input,select{
 #recommended .card,#genres .card,#popular .card{
     width:43%;
     max-width: 230px;
+}
+
+.carousel {
+    margin-top: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel img {
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 400px;
+    transition: transform 0.5s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Прозрачный чёрный фон */
+    color: #ff9800; /* Оранжевый текст */
+    padding: 1rem;
+    border-radius: 10px;
 }
