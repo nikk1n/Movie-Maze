@@ -374,7 +374,7 @@ fieldset, #profile-display, #password-change {
 .profile-text{
     border:black;
     border-style: solid solid none solid;
-    transition: 2s; !important;
+    transition: 2s, !important;
     max-width: 35em;
     background-color: lightgray;
 }
@@ -545,4 +545,28 @@ input,select{
 #recommended .card,#genres .card,#popular .card{
     width:43%;
     max-width: 230px;
+}
+
+.carousel {
+    margin-top: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel img {
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 400px;
+    transition: transform 0.5s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Прозрачный чёрный фон */
+    color: #ff9800; /* Оранжевый текст */
+    padding: 1rem;
+    border-radius: 10px;
 }
